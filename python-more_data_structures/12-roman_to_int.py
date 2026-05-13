@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    roman = {
+    roman_digits = {
         'I': 1,
         'V': 5,
         'X': 10,
@@ -9,4 +9,14 @@ def roman_to_int(roman_string):
         'D': 500,
         'M': 1000
     }
-    return
+
+    number = 0
+    for i in range(len(roman_string)):
+        if i == len(roman_string) - 1:
+            number = number + roman_digits[roman_string[i]]
+        else:
+            if roman_digits[roman_string[i]] >= roman_digits[roman_string[i + 1]]:
+                number = number + roman_digits[roman_string[i]]
+            else:
+                number = number - roman_digits[roman_string[i]]
+    return number
