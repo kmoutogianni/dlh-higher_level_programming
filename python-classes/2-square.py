@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" Module 2"""
+
 
 class Square:
     """Class defining a square - with value checks"""
