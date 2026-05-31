@@ -23,3 +23,7 @@ class Student:
             return attr_dict
 
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """replaces all self attributes from json dictionary """
+        self.__dict__.update(json)
