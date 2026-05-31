@@ -15,5 +15,4 @@ except FileNotFoundError:
 
 python_list.extend(sys.argv[1:])
 
-with open(filename, "w", encoding="utf-8") as f:
-    json.dump(python_list, f)
+save_to_json_file(python_list, filename)
